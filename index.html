@@ -1,0 +1,159 @@
+<html>
+<head>
+    <title>Descriere - Feldrihan Oana Maria</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #2e6a7d;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+            padding: 10px;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin: 20px auto;
+            opacity: 0.8;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2e6a7d;
+            color: white;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        ul {
+            list-style-type: "\1F4BB";
+            list-style-position: inside;
+            margin: 0;
+            text-align: center;
+        }
+
+        ul li {
+            background-color: #2e6a7d;
+            color: white;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="nametag">Feldrihan Oana Maria</h1>
+    <p>Email: <a href="mailto:Feldrihan.lu.Oana@utcluj.ro">oana@utcluj.com</a></p>
+    <img id="profile-pic" src="basescu.jpg" alt="Poza de profil Feldrihan Oana">
+
+    <h2>Structura rețelei</h2>
+    <ul id="network-structure">
+        <li><strong>Adresa MAC:</strong> fe80::43b8:93f0:c0db:ae84%9</li>
+        <li><strong>Adresa IP:</strong> 192.168.0.100</li>
+        <li><strong>Debit download:</strong> 56.49 Mbps</li>
+        <li><strong>Debit upload:</strong> 46.30 Mbps</li>
+    </ul>
+
+    <h2>Specificațiile tehnice ale stației principale</h2>
+    <table id="specifications">
+        <tr>
+            <td>Procesor</td>
+            <td>Intel</td>
+            <td>Core i5, 2.70 GHz</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>ASUS</td>
+            <td>8GB </td>
+        </tr>
+        <tr>
+            <td>Stocare</td>
+            <td>Asus</td>
+            <td>476  GB</td>
+        </tr>
+    </table>
+
+    <h2>Utilizarea resurselor</h2>
+    <div class="slideshow">
+        <img src="images/vadim-.jpg" alt="Slideshow 1">
+        <img src="images/Diana-sosoaca.jpg" alt="Slideshow 2">
+        <img src="images/simion.jpg" alt="Slideshow 3">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".slideshow img");
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.style.display = i === index ? "block" : "none";
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            setInterval(nextSlide, 3000);
+            showSlide(currentSlide);
+        });
+    </script>  
+</body> 
+</html>
